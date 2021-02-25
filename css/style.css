@@ -75,7 +75,7 @@ nav a:hover{
   z-index: 1;
 
   /*Your code here*/
-  position: relative;
+  position: absolute;
   top: -50px;
 }
 
@@ -89,7 +89,7 @@ nav a:hover{
 /*Req 4*/
 /*Write selector/rule property to style all elements when in focus*/
 *:focus{
-  border-top: 20px dashed;
+  border-top: 2px dashed;
   border-bottom: 2px dashed;
 }
 
@@ -97,13 +97,12 @@ nav a:hover{
 .container{
   /*Your Code Here*/
   display: grid;
-  /* grid-template-columns: 1fr 3fr 3fr 1fr; */
   grid-template-columns: 1fr 3fr 3fr 1fr;
   grid-template-rows: auto auto auto auto;
   row-gap: 20px;
 }
 
-header{
+header {
   background-attachment: fixed; /* Parallax effect */     
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
@@ -122,14 +121,14 @@ header{
 /*Req 7a*/
 .about, .method, .client, .contacts{
   /*Your Code Here*/
-  grid-column: 2/ span4;
+  grid-column: 2/span 2;
 
 }
 
 /*Req 8a, 8b, and 8c*/
 .about-image, .method-image, .client-image, .contact-image{
   /*Your Code Here*/
-  grid-column: 1/span4;
+  grid-column: 1/-1;
   max-height: 650px;
   overflow: hidden;
 }
@@ -137,40 +136,28 @@ header{
 /*Req 7b & 8d*/
 .about, .about-image{
    /*Your Code Here*/
-   grid-row: 1/span2;
-   grid-row: 2/4;
-   grid-row: 3/span4;
-   grid-row: 4/span5;
-
+   grid-row: 1/span 1;
 }
 
 /*Req 7b & 8d*/
 .method, .method-image{
    /*Your Code Here*/
-   grid-row: 1/span2;
-   grid-row: 2/4;
-   grid-row: 3/span4;
-   grid-row: 4/span5;
+   grid-row: 2/span 1;
+   
 
 }
 
 /*Req 7b & 8d*/
 .client, .client-image{
     /*Your Code Here*/
-   grid-row: 1/span2;
-   grid-row: 2/4;
-   grid-row: 3/span4;
-   grid-row: 4/span5;
+   grid-row: 3/span 1;
 
 }
 
 /*Req 7b & 8d*/
 .contacts, .contact-image{
     /*Your Code Here*/
-   grid-row: 1/span2;
-   grid-row: 2/span3;
-   grid-row: 3/span4;
-   grid-row: 4/span5;
+   grid-row: 4/span 1;
 
 }
 
@@ -180,8 +167,8 @@ header{
   border: 10px solid black;
   padding: 30px;
   /*Your code here:*/
-  justify-self: center;
-
+  align-self: center;
+  
 }
 
 
@@ -211,13 +198,13 @@ header{
   /*Req 12*/
   .about, .client, .method-image, .contact-image{
     /*Your code here:*/
-    grid-column: 3/span5;
+    grid-column: 3/-1;
   }
 
   /*Req 13*/
   .about-image, .client-image, .method, .contacts{
     /*Your code here:*/
-    grid-column: 2/span2;
+    grid-column: 2/span 2;
   }
 }
 
